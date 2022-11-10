@@ -1,0 +1,73 @@
+.intro{
+    background-image: url("../../assets/toa-heftiba-xAQZ8plN8cM-unsplash.jpg");
+    background-size: cover;
+    height: 85vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    justify-content: space-between;
+    padding: 0 4em;
+}
+
+.intro h2{
+    font-size: 3rem;
+}
+
+.intro p{
+    font-size: 1.5rem;
+    color: #bcbbc3;
+}
+
+.welcome{
+    width: 35%;
+}
+
+.sneakPeek{
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: flex-end;
+}
+
+.sneakPeek img{
+    max-width: 35%;
+    border-radius: 7px;
+    border: 7px solid white;
+    box-shadow: 0 1px 20px 16px rgb(33 36 37 / 45%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+}
+
+.btn {
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+  .btn:focus-visible {
+    box-shadow: none;
+  }
