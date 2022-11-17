@@ -11,7 +11,7 @@ const Hero = () => {
       <div className={styles.welcome}>
         <h2>Welcome to Jellyfish Dreams</h2>
         <p>A deep world in which several AI and one human act as one.</p>
-        <button className={styles.btn}>Check on Opeansea</button>
+        <button className={styles.btn}>Check on Opensea</button>
       </div>
 
       <div className={styles.sneakPeek}>
