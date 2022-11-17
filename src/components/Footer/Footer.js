@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      
+      <p><a href="https://twitter.com/jellyfishdreams">Twitter</a></p>
+      <p><a href="https://discord.gg/8jZ2YjZ">Discord</a></p>
+      <p><a href="https://www.instagram.com/jellyfishdreams/">Instagram</a></p>
+      
+
+    </footer>
   )
 }
 

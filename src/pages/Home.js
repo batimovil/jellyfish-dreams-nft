@@ -10,13 +10,11 @@ const Home = () => {
 
   return (
     <>
-    
       <Nav />
       <Hero />
       <MintArea />
       <Faqs />
       <Footer />
-
     </>
   );
 };
