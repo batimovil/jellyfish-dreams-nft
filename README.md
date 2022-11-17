@@ -1,21 +1,21 @@
-# Jellyfish Dreams NFT
+# 🌊 Jellyfish Dreams NFT
 
 The collection is about the beauty of the ocean and the creatures that live in it. Jellyfish are one of the most beautiful creatures in the ocean and they are also one of the most mysterious. They are 95% water and 5% jelly. They are also the only animal that has no brain. So with this in mind we decided to create a collection of jellyfish that are related with humans and their dreams. 
 
 
-## Acknowledgements
+## ❤️‍🔥 Acknowledgements
 
  - [Dall E from Open AI](https://openai.com/dall-e-2/)
  - [Dreamstudio](https://beta.dreamstudio.ai/)
  - [Neural Filters from Adobe Photoshop](https://helpx.adobe.com/photoshop/using/neural-filters.html#:~:text=Neural%20Filters%20is%20a%20new,explore%20creative%20ideas%20in%20seconds.)
 
 
-## Authors
+## 🚴 Authors
 
 - [@batimovil](https://www.github.com/batimovil)
 
 
-## Badges
+## 📚 Badges
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
@@ -27,7 +27,7 @@ https://testnets.opensea.io/assets/goerli/0xfcd6063393e78f37f6026b30ec7030986971
 # Contract
 https://goerli.etherscan.io/address/0xfCd6063393E78F37F6026b30ec7030986971b724
 
-## Tech Stack
+## 💻 Tech Stack
 
 **Client:** React, Web3
 
