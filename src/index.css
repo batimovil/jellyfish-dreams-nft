@@ -1,5 +1,13 @@
 @import url("https://use.typekit.net/mps2esr.css");
 
+* {
+  transition: all 1s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: bd-supper,sans-serif;
   font-weight: 400;
@@ -12,4 +20,10 @@ body{
   font-family: bd-supper,sans-serif;
 font-weight: 700;
 font-style: normal;
+}
+
+
+details{
+  animation-delay: 2s;
+  cursor: pointer;
 }

@@ -12,7 +12,7 @@ const Mint = () => {
   const balance = useBalance();
   const provider = useWalletProvider();
   const web3 = new Web3(provider);
-
+  
   const [userBalance, setUserBalance] = useState(0);
 
   useEffect(() => {
