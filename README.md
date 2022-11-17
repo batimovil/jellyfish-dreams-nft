@@ -3,6 +3,9 @@ https://testnets.opensea.io/assets/goerli/0xfcd6063393e78f37f6026b30ec7030986971
 
 https://goerli.etherscan.io/address/0xfCd6063393E78F37F6026b30ec7030986971b724
 
+# About the project
+The collection is about the beauty of the ocean and the creatures that live in it. Jellyfish are one of the most beautiful creatures in the ocean and they are also one of the most mysterious. They are 95% water and 5% jelly. They are also the only animal that has no brain. So with this in mind we decided to create a collection of jellyfish that are related with humans and their dreams. 
+
 # WTD OnboardJs Context Boilerplate
 
 ## To do...
