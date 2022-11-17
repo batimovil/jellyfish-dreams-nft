@@ -3,7 +3,7 @@ import styles from "./Faqs.module.css";
 
 const Faqs = () => {
   return (
-    <section className={styles.faqs}>
+    <section id="faqs" className={styles.faqs}>
       <h1 className={styles.title}>FAQs</h1>
 
       <details className={styles.faqItem}>

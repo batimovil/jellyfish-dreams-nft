@@ -213,7 +213,7 @@ const MintArea = () => {
       </div>
       {/* <WalletClient /> */}
 
-      <section className={styles.startMint}>
+      <section id="mint" className={styles.startMint}>
         <div className={styles.goDeep}>
           <div className={styles.goDeepText}>
             <h3>Wanna go deep?</h3>
