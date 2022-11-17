@@ -29,6 +29,7 @@ const MintArea = () => {
   const [userBalance, setUserBalance] = useState(0);
   const provider = useWalletProvider();
   const web3 = new Web3(provider);
+  const [mintStatus, setMintStatus] = useState("Waiting");
 
   const handleIncrement = () => {
     setCounter(counter + 1);
@@ -39,39 +40,6 @@ const MintArea = () => {
       setCounter(counter - 1);
     }
   };
-
-  useEffect(() => {
-    setTotal(counter * tokenPrice);
-  }, [counter, tokenPrice]);
-
-  useEffect(() => {
-    const getContract = async () => {
-      const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
-      const price = await myContract.methods
-        .monsterPrice()
-        .call()
-        .catch(function (error) {
-          return false;
-        });
-      console.log(price);
-      //const valueEth = web3.utils.fromWei(String(price));
-      setTokenPrice(price);
-    };
-
-    getContract();
-  }, [address]);
-
-  useEffect(() => {
-    if (address) {
-      if (balance) {
-        const valueEth = web3.utils.fromWei(`${balance}`, "ether");
-        const totalFixed = parseFloat(valueEth).toFixed(4);
-        setUserBalance(totalFixed);
-      }
-    } else {
-      setUserBalance(0);
-    }
-  }, [web3.utils, balance, address]);
 
   const handleMint = async () => {
     console.log("MINT!");
@@ -123,6 +91,7 @@ const MintArea = () => {
         .once("transactionHash", function (hash) {
           // setUserConfirmation(`success`);
           // setHash(hash);
+          setMintStatus("userConfirmed");
           console.log("Transaction Hash", hash);
         })
         .once("receipt", function (receipt) {
@@ -130,14 +99,67 @@ const MintArea = () => {
           // setTimeout(() => {
           //   setSuccess(true);
           // }, 1000);
+          setMintStatus("blockchainConfirmed");
           console.log("Transaction Confirmed", receipt);
         })
         .on("error", function (error, receipt) {
           // handleError(error);
           console.log("Error", error);
+          setMintStatus("error");
         });
     } catch (error) {}
   };
+
+  const showMintStatus = () => {
+    switch (mintStatus) {
+      case "waiting":
+        return <p>Waiting</p>;
+      case "userConfirmed":
+        return <p>Waiting for blockchain confirmation</p>;
+      case "blockchainConfirmed":
+        return <p>Transaction confirmed</p>;
+      case "error":
+        return <p>Transaction error</p>;
+      default:
+        return <p>Waiting</p>;
+    }
+  }
+
+  useEffect(() => {
+    setTotal(counter * tokenPrice);
+  }, [counter, tokenPrice]);
+
+  useEffect(() => {
+    const getContract = async () => {
+      const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
+      const price = await myContract.methods
+        .monsterPrice()
+        .call()
+        .catch(function (error) {
+          return false;
+        });
+      
+      const valueEth = web3.utils.fromWei(`${price || 0}`, "ether");
+
+      setTokenPrice(valueEth);
+    };
+
+    getContract();
+  }, [address]);
+
+  useEffect(() => {
+    if (address) {
+      if (balance) {
+        const valueEth = web3.utils.fromWei(`${balance}`, "ether");
+        const totalFixed = parseFloat(valueEth).toFixed(4);
+        setUserBalance(totalFixed);
+      }
+    } else {
+      setUserBalance(0);
+    }
+  }, [web3.utils, balance, address]);
+
+  
 
   return (
     <>
@@ -212,7 +234,7 @@ const MintArea = () => {
         </Marquee>
       </div>
       {/* <WalletClient /> */}
-
+      
       <section id="mint" className={styles.startMint}>
         <div className={styles.goDeep}>
           <div className={styles.goDeepText}>
@@ -258,6 +280,7 @@ const MintArea = () => {
             <button className={styles.btn} onClick={handleMint}>
               Mint now
             </button>
+            {showMintStatus()}
           </div>
         </div>
       </section>
