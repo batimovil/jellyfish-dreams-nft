@@ -1,0 +1,31 @@
+.title{
+    font-size: 2rem;
+    color: antiquewhite;
+    padding-left: 0.1em;
+}
+
+.faqs{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: coral;
+    border-radius: 12px;
+}
+
+.faqs h2{
+    margin: 0;
+}
+
+.faqItem{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    color: cornsilk ;
+    background-color: #fb663c;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    
+}
