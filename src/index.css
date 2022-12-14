@@ -1,19 +1,21 @@
 @import url("https://use.typekit.net/mps2esr.css");
 
+body{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: bd-supper,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:#001A3D;
+}
+
 * {
   transition: all 1s linear;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body{
-  font-family: bd-supper,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 20px;
-  background-color: cornflowerblue;
 }
 
 .bd-supperBold{
@@ -25,4 +27,25 @@ font-style: normal;
 details{
   animation-delay: 2s;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  body{
+    max-width: 1000px;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    max-width: 700px;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body{
+    max-width: 480px;
+    padding: .5em;
+  }
 }

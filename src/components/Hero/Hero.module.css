@@ -71,3 +71,57 @@
   .btn:focus-visible {
     box-shadow: none;
   }
+
+  @media screen and (max-width: 1200px) {
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .intro{
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .intro h2{
+        font-size: 2rem;
+    }
+
+    .intro p{
+        font-size: 1rem;
+    }
+
+    .welcome{
+        width: 100%;
+        text-align: center;
+    }
+
+    .sneakPeek{
+        width: 80%;
+        justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .intro{
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .intro h2{
+        font-size: 2rem;
+    }
+
+    .intro p{
+        font-size: 1rem;
+    }
+
+    .welcome{
+        width: 100%;
+        text-align: center;
+    }
+
+    .sneakPeek{
+        width: 100%;
+        justify-content: center;
+    }
+  }

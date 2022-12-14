@@ -1,32 +1,53 @@
-.title{
-    font-size: 2rem;
-    color: antiquewhite;
-    padding-left: 0.1em;
+.title {
+  font-size: 2rem;
+  color: antiquewhite;
+  padding-left: 0.1em;
 }
 
-.faqs{
-    display: flex;
-    flex-direction: column;
-    padding: 20px 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: coral;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+.faqs {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  margin: 0 auto;
+  background-color: coral;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-.faqs h2{
-    margin: 0;
+.faqs h2 {
+  margin: 0;
 }
 
-.faqItem{
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 10px;
-    color: cornsilk ;
-    background-color: #fb663c;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  color: cornsilk;
+  background-color: #fb663c;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+details {
+  height: auto;
+  transition: 1s;
+}
+
+details {
+  transition: height 1s ease;
+  overflow: hidden;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
