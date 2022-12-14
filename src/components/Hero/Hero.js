@@ -19,13 +19,16 @@ const Hero = () => {
       </div>
 
       <div className={styles.sneakPeek}>
-        {[image1, image2, image3, image4].map((image,index) => {
+        {[1, 2, 3, 4].map((image,index) => {
+          index++;
+          let txt = "sneakPeekImg" + index;
+          console.log(txt)
           return (
-            <img
+            <div
               key={index}
               alt={`a sneak preview of one of the nft jellyfish dreams`}
-              src={image}
-            />
+              className={ `${styles[txt]} ${styles.sneakPeekImg} ${styles.img}` }
+            ></div>
           );
         })}
       </div>

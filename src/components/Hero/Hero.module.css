@@ -1,148 +1,182 @@
-.intro{
-    background-image: url("../../assets/toa-heftiba-xAQZ8plN8cM-unsplash.jpg");
-    background-size: cover;
-    height: 85vh;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    color: whitesmoke;
-    justify-content: space-between;
-    padding: 0 4em;
+.intro {
+  background-image: url("../../assets/toa-heftiba-xAQZ8plN8cM-unsplash.jpg");
+  background-size: cover;
+  height: 85vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  justify-content: space-between;
+  padding: 0 4em;
 }
 
-.intro h2{
-    font-size: 3rem;
-    margin-top: 0;
+.intro h2 {
+  font-size: 3rem;
+  margin-top: 0;
 }
 
-.intro p{
-    font-size: 1.5rem;
-    color: #bcbbc3;
+.intro p {
+  font-size: 1.5rem;
+  color: #bcbbc3;
 }
 
-.welcome{
-    width: 35%;
+.welcome {
+  width: 35%;
 }
 
-.sneakPeek{
-    display: flex;
-    width: 50%;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: flex-end;
+.sneakPeek {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: flex-end;
 }
 
-.sneakPeek img{
-    max-width: 35%;
-    max-height: 35%;
-    overflow-clip-margin: 0;
-    overflow: hidden;
-    border-radius: 7px;
-    border: 7px solid white;
-    box-shadow: 0 1px 20px 16px rgb(33 36 37 / 45%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+.sneakPeekImg {
+  object-fit: cover;
+}
+
+.sneakPeek .img {
+  border-radius: 7px;
+  border: 7px solid white;
+  box-shadow: 0 1px 20px 16px rgb(33 36 37 / 45%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: contain;
+}
+
+.sneakPeekImg1 {
+  background-image: url("../../assets/jellyfish-1.png");
+}
+
+.sneakPeekImg2 {
+  background-image: url("../../assets/jellyfish-2.png");
+}
+
+.sneakPeekImg3 {
+  background-image: url("../../assets/jellyfish-3.png");
+}
+
+.sneakPeekImg4 {
+  background-image: url("../../assets/jellyfish-4.png");
 }
 
 .btn {
-    background-color: #FFFFFF;
-    border: 0;
-    border-radius: .5rem;
-    box-sizing: border-box;
-    color: #111827;
-    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: .875rem;
-    font-weight: 600;
-    line-height: 1.25rem;
-    padding: .75rem 1rem;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn svg {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+}
+
+.btn:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+.btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .sneakPeek .img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .welcome {
+    width: 100%;
     text-align: center;
-    text-decoration: none #D1D5DB solid;
-    text-decoration-thickness: auto;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
-  .btn svg{
-    width: 50px;
-    height: 50px;
-    margin-right: 1em;
+  .sneakPeek {
+    width: 80%;
+    justify-content: center;
   }
-  
-  .btn:hover {
-    background-color: rgb(249,250,251);
-  }
-  
-  .btn:focus {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-  
-  .btn:focus-visible {
-    box-shadow: none;
-  }
-
-  @media screen and (max-width: 1200px) {
-    
-  }
-  
-  @media screen and (max-width: 768px) {
-    .intro{
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-
-    .intro h2{
-        font-size: 2rem;
-    }
-
-    .intro p{
-        font-size: 1rem;
-    }
-
-    .welcome{
-        width: 100%;
-        text-align: center;
-    }
-
-    .sneakPeek{
-        width: 80%;
-        justify-content: center;
-    }
-    .btn{
-      width: fit-content;
+  .btn {
+    width: fit-content;
     margin: 0 auto;
-    }
   }
-  
-  @media screen and (max-width: 480px) {
-    .intro{
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
+  .sneakPeek .img {
+    width: 100px;
+    height: 100px;
+  }
+}
 
-    .intro h2{
-        font-size: 2rem;
-    }
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
-    .intro p{
-        font-size: 1rem;
-    }
+  .intro h2 {
+    font-size: 2rem;
+  }
 
-    .welcome{
-        width: 100%;
-        text-align: center;
-    }
+  .intro p {
+    font-size: 1rem;
+  }
 
-    .sneakPeek{
-        width: 100%;
-        justify-content: center;
-    }
-    .btn{
-      width: fit-content;
+  .welcome {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sneakPeek {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn {
+    width: fit-content;
     margin: 0 auto;
-    }
   }
+
+  .sneakPeek .img {
+    width: 90px;
+    height: 90px;
+  }
+}
