@@ -11,7 +11,7 @@ import image8 from "../../assets/jellyfish-8.png";
 import image9 from "../../assets/jellyfish-9.png";
 import image10 from "../../assets/jellyfish-10.png";
 import styles from "../MintArea/MintArea.module.css";
-import WalletClient from "../WalletClient/WalletClient";
+import WalletButton from "../WalletButton/WalletButton";
 import Web3 from "web3";
 import {
   useAddress,
@@ -73,8 +73,6 @@ const MintArea = () => {
       console.log("Sale Started", publicSaleStarted);
       console.log("Price", price);
 
-      const count = 1;
-
       const mintParams = {
         proof: ["0x0000000000000000000000000000000000000000"],
         leaf: "0x0000000000000000000000000000000000000000",
@@ -83,7 +81,7 @@ const MintArea = () => {
 
       const total = parseInt(counter) * parseFloat(price);
       // const totalFixed = parseFloat(total.toFixed(4));
-      // const valueEth = web3.utils.toWei(`${totalFixed}`, 'ether');
+      // const valueEth = web3.utils.toWei(`${totalFixed}`, 'gwei');
 
       await myContract.methods
         .mint(mintParams.proof, mintParams.leaf, parseInt(mintParams.count))
@@ -126,7 +124,7 @@ const MintArea = () => {
   }
 
   useEffect(() => {
-    setTotal(counter * tokenPrice);
+    setTotal( counter * tokenPrice );
   }, [counter, tokenPrice]);
 
   useEffect(() => {
@@ -139,7 +137,7 @@ const MintArea = () => {
           return false;
         });
       
-      const valueEth = web3.utils.fromWei(`${price || 0}`, "ether");
+      const valueEth = web3.utils.fromWei(`${price || 0}`, "wei");
 
       setTokenPrice(valueEth);
     };
@@ -150,7 +148,8 @@ const MintArea = () => {
   useEffect(() => {
     if (address) {
       if (balance) {
-        const valueEth = web3.utils.fromWei(`${balance}`, "ether");
+        const valueEth = web3.utils.fromWei(`${balance}`, "wei");
+        console.log(valueEth, "valueEth")
         const totalFixed = parseFloat(valueEth).toFixed(4);
         setUserBalance(totalFixed);
       }
@@ -250,7 +249,7 @@ const MintArea = () => {
           <div>
             <i></i>
             <div>
-              <span>price per jellyfish</span><p>5 ETH</p>
+              <span>price per jellyfish</span><p>5 WEI</p>
             </div>
           </div>
 
@@ -275,11 +274,13 @@ const MintArea = () => {
           <div className={styles.okMint}>
             <div className={styles.totalCounter}>
               <p>Total</p>
-              <span>{total}ETH</span>
+              <span>{total}WEI</span>
             </div>
-            <button className={styles.btn} onClick={handleMint}>
+
+            {address ? (<button className={styles.btn} onClick={handleMint}>
               Mint now
-            </button>
+            </button>) : ( <WalletButton /> )}
+            
             {showMintStatus()}
           </div>
         </div>

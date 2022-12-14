@@ -2,7 +2,6 @@ import React from "react";
 import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
 import Faqs from "../components/Faqs/Faqs";
-import Collection from "../components/Collection/Collection";
 import MintArea from "../components/MintArea/MintArea";
 import Footer from "../components/Footer/Footer";
 
