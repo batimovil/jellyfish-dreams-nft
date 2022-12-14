@@ -193,3 +193,36 @@ aside section div span {
 aside section div span:hover {
   border-bottom: 1px solid coral !important;
 }
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .startMint {
+    flex-direction: column;
+    align-items: center;
+  }
+  .goDeep {
+    width: 100%;
+    margin-bottom: .5em;
+  }
+
+  .mintForm {
+    width: 86%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .startMint {
+    flex-direction: column;
+    align-items: center;
+  }
+  .goDeep {
+    width: 100%;
+  }
+
+  .mintForm {
+    width: fit-content;
+  }
+}

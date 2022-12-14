@@ -7,7 +7,12 @@ body{
   font-family: bd-supper,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color:#001A3D;
+  background: linear-gradient(120deg, #001a3d, #000000, #0058c5);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 18s ease infinite;
+  -moz-animation: AnimationName 18s ease infinite;
+  animation: AnimationName 18s ease infinite;
 }
 
 * {
@@ -38,14 +43,30 @@ details{
 
 @media screen and (max-width: 768px) {
   body{
-    max-width: 700px;
-    padding: 2em;
+    max-width: 680px;
+    padding: .5em;
   }
 }
 
 @media screen and (max-width: 480px) {
   body{
-    max-width: 480px;
+    max-width: 440px;
     padding: .5em;
   }
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
