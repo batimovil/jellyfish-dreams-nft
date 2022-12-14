@@ -1,196 +1,195 @@
-
-
-.startMint{
-    display: flex;
-    justify-content: space-between;
-    margin: 1em 0;
+.startMint {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
 }
 
-.mintForm{
-    background-color: #0058c5;
-    padding: 3em;
-    border-radius: 20px;
-    color: white;
-    width: 25%;
+.mintForm {
+  background-color: #0058c5;
+  padding: 3em;
+  border-radius: 20px;
+  color: white;
+  width: 25%;
 }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   background-color: transparent;
   color: #666666;
   cursor: not-allowed;
 }
 
-.mintCounter{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: lightblue;
-    border-radius: 0.5rem;
-    color: black;
+.mintCounter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  border-radius: 0.5rem;
+  color: black;
 }
 
 .btn {
-    background-color: #FFFFFF;
-    border: 0;
-    border-radius: .5rem;
-    box-sizing: border-box;
-    color: #111827;
-    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: .875rem;
-    font-weight: 600;
-    line-height: 1.25rem;
-    padding: .75rem 1rem;
-    text-align: center;
-    text-decoration: none #D1D5DB solid;
-    text-decoration-thickness: auto;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .btn:hover {
-    background-color: rgb(249,250,251);
-  }
-  
-  .btn:focus {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-  
-  .btn:focus-visible {
-    box-shadow: none;
-  }
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-  .okMint{
-    display: flex;
-    flex-direction: column;
-  }
+.btn:hover {
+  background-color: rgb(249, 250, 251);
+}
 
-  .totalCounter{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 
-  .goDeep{
-    background: url("../../assets/wanna-go-deep-rare-fx.jpg");
-    background-size: cover;
-    width: 59%;
-    border-radius: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-  }
+.btn:focus-visible {
+  box-shadow: none;
+}
 
-  .goDeep h3{
-    margin: 0;
-  }
+.okMint {
+  display: flex;
+  flex-direction: column;
+}
 
-  .goDeepText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: coral;
-    font-size: 3rem;
-    z-index:100;
-  }
+.totalCounter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .marqueeBox{
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 1em;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  }
+.goDeep {
+  background: url("../../assets/wanna-go-deep-rare-fx.jpg");
+  background-size: cover;
+  width: 59%;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
 
-  .marquee{
-    width: 100%;
-    height: 20vh;
-  }
+.goDeep h3 {
+  margin: 0;
+}
 
-  .marquee img{
-    height: 100%;
+.goDeepText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: coral;
+  font-size: 3rem;
+  z-index: 100;
+}
 
-  }
+.marqueeBox {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1em;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
 
-  .mintStatus{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;
-    opacity: .5;
-    border: 1px solid rgba(255, 255, 255, 0.485);
-    border-radius: 12px;
-    padding: .5em;
-  }
+.marquee {
+  width: 100%;
+  height: 20vh;
+}
 
-  .pricePer{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    padding: 0 0 1em 0;
-    font-family: sans-serif;
-  }
+.marquee img {
+  height: 100%;
+}
 
-  aside{
-    position: fixed;
-    z-index: 102;
-  }
+.mintStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  opacity: 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.485);
+  border-radius: 12px;
+  padding: 0.5em;
+}
 
-  aside section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: seashell !important;
-    color: black !important;
-    padding: 1em;
-    border-radius: 12px;
-    margin-top: 1em;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  }
+.pricePer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 1em 0;
+  font-family: sans-serif;
+}
 
-  aside section p{
-    display: none;
-  }
+aside {
+  position: fixed;
+  z-index: 102;
+}
 
-  aside section header div:nth-of-type(1){
-    display: none !important;
-  }
-  
-  aside section header{
-    color: black;
-  }
+aside section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: seashell !important;
+  color: black !important;
+  padding: 1em;
+  border-radius: 12px;
+  margin-top: 1em;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
 
-  aside section ul{
-    flex-flow: column wrap !important;
-    padding: 1em !important;
-  }
+aside section p {
+  display: none;
+}
 
-  aside section button{
-    border: 1px solid rgba(0, 0, 0, 0.092) !important;
-    border-radius: 12px !important;
-    transition: 1s !important;
-  }
+aside section header div:nth-of-type(1) {
+  display: none !important;
+}
 
-  aside section button:hover{
-    background-color: rgba(255, 127, 80, 0.307) !important;
-  }
+aside section header {
+  color: black;
+}
 
-  aside section div span{
-    color: coral !important;
-    border-bottom: 1px solid transparent !important;
-    transition: 1s !important;
-  }
+aside section ul {
+  flex-flow: column wrap !important;
+  padding: 1em !important;
+}
 
-  aside section div span:hover{
-    border-bottom: 1px solid coral !important;
-  }
+aside section button {
+  border: 1px solid rgba(0, 0, 0, 0.092) !important;
+  border-radius: 12px !important;
+  transition: 1s !important;
+}
+
+aside section button:hover {
+  background-color: rgba(255, 127, 80, 0.307) !important;
+}
+
+aside section div span {
+  color: coral !important;
+  border-bottom: 1px solid transparent !important;
+  transition: 1s !important;
+}
+
+aside section div span:hover {
+  border-bottom: 1px solid coral !important;
+}
