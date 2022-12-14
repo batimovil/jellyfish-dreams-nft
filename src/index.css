@@ -9,7 +9,6 @@ body{
   font-style: normal;
   background: linear-gradient(120deg, #001a3d, #000000, #0058c5);
   background-size: 600% 600%;
-
   -webkit-animation: AnimationName 18s ease infinite;
   -moz-animation: AnimationName 18s ease infinite;
   animation: AnimationName 18s ease infinite;
