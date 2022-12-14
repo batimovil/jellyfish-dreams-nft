@@ -80,28 +80,19 @@ const MintArea = () => {
       };
 
       const total = parseInt(counter) * parseFloat(price);
-      // const totalFixed = parseFloat(total.toFixed(4));
-      // const valueEth = web3.utils.toWei(`${totalFixed}`, 'gwei');
 
       await myContract.methods
         .mint(mintParams.proof, mintParams.leaf, parseInt(mintParams.count))
         .send({ from: address, value: total })
         .once("transactionHash", function (hash) {
-          // setUserConfirmation(`success`);
-          // setHash(hash);
           setMintStatus("userConfirmed");
           console.log("Transaction Hash", hash);
         })
         .once("receipt", function (receipt) {
-          // setBlChainConfirmation(`success`);
-          // setTimeout(() => {
-          //   setSuccess(true);
-          // }, 1000);
           setMintStatus("blockchainConfirmed");
           console.log("Transaction Confirmed", receipt);
         })
         .on("error", function (error, receipt) {
-          // handleError(error);
           console.log("Error", error);
           setMintStatus("error");
         });
@@ -111,20 +102,20 @@ const MintArea = () => {
   const showMintStatus = () => {
     switch (mintStatus) {
       case "waiting":
-        return <p>Waiting</p>;
+        return "Waiting";
       case "userConfirmed":
-        return <p>Waiting for blockchain confirmation</p>;
+        return "Waiting for blockchain confirmation";
       case "blockchainConfirmed":
-        return <p>Transaction confirmed</p>;
+        return "Transaction confirmed";
       case "error":
-        return <p>Transaction error</p>;
+        return "Transaction error";
       default:
-        return <p>Waiting</p>;
+        return "Waiting";
     }
-  }
+  };
 
   useEffect(() => {
-    setTotal( counter * tokenPrice );
+    setTotal(counter * tokenPrice);
   }, [counter, tokenPrice]);
 
   useEffect(() => {
@@ -136,7 +127,7 @@ const MintArea = () => {
         .catch(function (error) {
           return false;
         });
-      
+
       const valueEth = web3.utils.fromWei(`${price || 0}`, "wei");
 
       setTokenPrice(valueEth);
@@ -149,7 +140,6 @@ const MintArea = () => {
     if (address) {
       if (balance) {
         const valueEth = web3.utils.fromWei(`${balance}`, "wei");
-        console.log(valueEth, "valueEth")
         const totalFixed = parseFloat(valueEth).toFixed(4);
         setUserBalance(totalFixed);
       }
@@ -157,8 +147,6 @@ const MintArea = () => {
       setUserBalance(0);
     }
   }, [web3.utils, balance, address]);
-
-  
 
   return (
     <>
@@ -170,16 +158,6 @@ const MintArea = () => {
           speed={40}
           gradient={false}
         >
-          {/* {[image1, image2, image3, image4,image5,image6,image7,image8,image9,image10].map((image, index) => {
-          return (
-            <img
-              key={index}
-              className={styles.marqueeSize}
-              alt={`a sneak preview of one of the nft jellyfish dreams`}
-              src={image}
-            />
-          );
-        })} */}
           <img
             className={styles.marqueeSize}
             alt={`a sneak preview of one of the nft jellyfish dreams`}
@@ -232,8 +210,7 @@ const MintArea = () => {
           />
         </Marquee>
       </div>
-      {/* <WalletClient /> */}
-      
+
       <section id="mint" className={styles.startMint}>
         <div className={styles.goDeep}>
           <div className={styles.goDeepText}>
@@ -246,11 +223,9 @@ const MintArea = () => {
           <h3>How deep is your love?</h3>
           <hr />
 
-          <div>
-            <i></i>
-            <div>
-              <span>price per jellyfish</span><p>5 WEI</p>
-            </div>
+          <div className={styles.pricePer}>
+            <span>🐚 price per jellyfish</span>
+            <p>5 WEI</p>
           </div>
 
           <div className={styles.mintCounter}>
@@ -277,11 +252,15 @@ const MintArea = () => {
               <span>{total}WEI</span>
             </div>
 
-            {address ? (<button className={styles.btn} onClick={handleMint}>
-              Mint now
-            </button>) : ( <WalletButton /> )}
-            
-            {showMintStatus()}
+            {address ? (
+              <button className={styles.btn} onClick={handleMint}>
+                Mint now
+              </button>
+            ) : (
+              <WalletButton />
+            )}
+
+            <p className={styles.mintStatus}> &#9432; {showMintStatus()}</p>
           </div>
         </div>
       </section>
