@@ -27,21 +27,7 @@ const Mint = () => {
     }
   }, [web3.utils, balance, address]);
 
-  useEffect( () => {
-    const getPrice = async () => {
-      const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
-      const price = await myContract.methods
-        .price()
-        .call()
-        .catch(function (error) {
-          return false;
-        });
 
-      const valueEth = web3.utils.fromWei(`${price}`, 'ether');
-      setTokenPrice(valueEth);
-    };
-    getPrice();
-  } )
 
   const handleMint = async () => {
     console.log('MINT!');

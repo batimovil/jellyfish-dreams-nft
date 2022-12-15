@@ -72,17 +72,17 @@ const MintArea = () => {
       console.log("Sale Started", saleStarted);
       console.log("Sale Started", publicSaleStarted);
       console.log("Price", price);
-
+       
       const mintParams = {
         proof: ["0x0000000000000000000000000000000000000000"],
         leaf: "0x0000000000000000000000000000000000000000",
-        count: counter,
+        counter,
       };
 
       const total = parseInt(counter) * parseFloat(price);
 
       await myContract.methods
-        .mint(mintParams.proof, mintParams.leaf, parseInt(mintParams.count))
+        .mint(mintParams.proof, mintParams.leaf, parseInt(mintParams.counter))
         .send({ from: address, value: total })
         .once("transactionHash", function (hash) {
           setMintStatus("userConfirmed");
@@ -114,21 +114,22 @@ const MintArea = () => {
     }
   };
 
-  useEffect( () => {
-    const getPrice = async () => {
-      const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
-      const price = await myContract.methods
-        .price()
-        .call()
-        .catch(function (error) {
-          return false;
-        });
+  // useEffect( () => {
+  //   const getPrice = async () => {
+  //     const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
+  //     const price = await myContract.methods
+  //       .price()
+  //       .call()
+  //       .catch(function (error) {
+  //         return false;
+  //       });
 
-      const valueEth = web3.utils.fromWei(`${price}`, 'ether');
-      setTokenPrice(valueEth);
-    };
-    getPrice();
-  } )
+  //     const valueEth = web3.utils.fromWei(`${price}`, 'wei');
+  //     console.log(valueEth)
+  //     setTokenPrice(valueEth);
+  //   };
+  //   getPrice();
+  // } )
 
   useEffect(() => {
     setTotal(counter * tokenPrice);

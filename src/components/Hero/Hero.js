@@ -18,7 +18,6 @@ const Hero = () => {
         {[1, 2, 3, 4].map((image,index) => {
           index++;
           let txt = "sneakPeekImg" + index;
-          console.log(txt)
           return (
             <div
               key={index}
