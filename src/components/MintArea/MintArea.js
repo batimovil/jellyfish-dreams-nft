@@ -61,7 +61,7 @@ const MintArea = () => {
         });
 
       const price = await myContract.methods
-        .monsterPrice()
+        .price()
         .call()
         .catch(function (error) {
           return false;
@@ -114,6 +114,22 @@ const MintArea = () => {
     }
   };
 
+  useEffect( () => {
+    const getPrice = async () => {
+      const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
+      const price = await myContract.methods
+        .price()
+        .call()
+        .catch(function (error) {
+          return false;
+        });
+
+      const valueEth = web3.utils.fromWei(`${price}`, 'ether');
+      setTokenPrice(valueEth);
+    };
+    getPrice();
+  } )
+
   useEffect(() => {
     setTotal(counter * tokenPrice);
   }, [counter, tokenPrice]);
@@ -122,7 +138,7 @@ const MintArea = () => {
     const getContract = async () => {
       const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
       const price = await myContract.methods
-        .monsterPrice()
+        .price()
         .call()
         .catch(function (error) {
           return false;
