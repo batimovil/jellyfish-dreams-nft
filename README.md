@@ -22,10 +22,10 @@ The collection is about the beauty of the ocean and the creatures that live in i
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 # OpenSea Testnet
-https://testnets.opensea.io/assets/goerli/0xfcd6063393e78f37f6026b30ec7030986971b724/1
+https://testnets.opensea.io/assets/goerli/0x96de218bCd13D7a501fB148e0CA13dE8d144172c/1
 
 # Contract
-https://goerli.etherscan.io/address/0xfCd6063393E78F37F6026b30ec7030986971b724
+https://goerli.etherscan.io/address/0x96de218bCd13D7a501fB148e0CA13dE8d144172c
 
 ## 💻 Tech Stack
 

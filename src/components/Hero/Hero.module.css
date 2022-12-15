@@ -85,7 +85,8 @@
   touch-action: manipulation;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: 60%;
 }
 
 .btn svg {
