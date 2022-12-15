@@ -61,7 +61,7 @@ const MintArea = () => {
         });
 
       const price = await myContract.methods
-        .monsterPrice()
+        .price()
         .call()
         .catch(function (error) {
           return false;
@@ -122,7 +122,7 @@ const MintArea = () => {
     const getContract = async () => {
       const myContract = new web3.eth.Contract(factoryAbi, factoryAddress);
       const price = await myContract.methods
-        .monsterPrice()
+        .price()
         .call()
         .catch(function (error) {
           return false;

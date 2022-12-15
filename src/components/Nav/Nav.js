@@ -9,8 +9,8 @@ const Nav = () => {
       <h1>Jellyfish Dreams NFT</h1>
 
       <ul>
-        <li> <a href='#mint'>Mint</a> </li>
-        <li> <a href='#faqs'>Faqs</a></li>
+        <li> <a href='#mint'>🐚 Mint</a> </li>
+        <li> <a href='#faqs'>ℹ️ Faqs</a></li>
         <li className={styles.btn}>{ <WalletButton />}</li>
       </ul>
 
